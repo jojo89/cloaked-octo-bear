@@ -21,17 +21,17 @@ Now that that's over with, what to do?
 
 1. Fork this repository to your GitHub account (you *did* set up a GitHub account, didn't you?).  See [here](https://help.github.com/articles/fork-a-repo) for instructions.
 1. Write some code:
-	* Create some structures to hold the data stored in /db/data/*.csv
-		* Trades (trades.csv)
-		* Price Curves (ice_brent.csv, ice_wti.csv, nymex.csv)
-	* Display the trades:
-		* All the trade's attributes
-		* The trade's price curve type
-		* The Market price (from the price curve data, the 'settle' column in each price curve dataset)
-		* The trade's Mark-to-Market value for the entire tenor of the trade, as described by the formula:  
-		![equation](http://latex.codecogs.com/gif.latex?%5Csum_%7Bt%3D1%7D%5E%7Bm%7Dv*%28p-c_%7Bt%7D%29)  
+  * Create some structures to hold the data stored in /db/data/*.csv
+    * Trades (trades.csv)
+    * Price Curves (ice_brent.csv, ice_wti.csv, nymex.csv)
+  * Display the trades:
+    * All the trade's attributes
+    * The trade's price curve type
+    * The Market price (from the price curve data, the 'settle' column in each price curve dataset)
+    * The trade's Mark-to-Market value for the entire tenor of the trade, as described by the formula:  
+    ![equation](http://latex.codecogs.com/gif.latex?%5Csum_%7Bt%3D1%7D%5E%7Bm%7Dv*%28p-c_%7Bt%7D%29)  
 where _t_ is the period (usually a month), *m* is the total number of periods in the trade, *v* is the volume of the trade, *p* is the price of the trade, and *c* is the market price of the trade for that month, which is pulled from the respective curve for that trade.
-		* Display the portfolio Mark-to-Market value, which is the sum of the MTM value of all the trades.
+    * Display the portfolio Mark-to-Market value, which is the sum of the MTM value of all the trades.
 1. Submit a pull request to us.  Don't know what that is?  See [here](https://help.github.com/articles/creating-a-pull-request).
 1. Profit!!!
 
@@ -41,6 +41,6 @@ This is due by 11:59pm on the day 1 week from when you received the instruction 
 
 Some things to keep in mind:
 
-*	We've set up this Rails project to use as a template.  It's not required; you're free to do what you'd like.  You can, if you'd prefer, code this puppy in Fortran.  However, you should note that there are some [Cucumber](www.cukes.info) tests embedded in the application.  We also have an additional set of Cucumber tests and we'll run both against whatever is submitted.  We won't go so far as to say your sample *has* to pass the tests, but they really, _really_ should.  We're jus' sayin'...  To run the Cucumber specs, use a terminal window, change to the project directory, and run `rake cucumber`. 
-*	We use [RSpec](http://rspec.info/), so we set this skeleton project up with same.  If you'd rather use [Test::Unit](http://test-unit.rubyforge.org/), that's fine.  You don't *have* to have unit tests, but we take the same approach our math teachers did back in high school: show your work.  To run specs, from the project directory, type `rake spec`.
-*	Making it look pretty (i.e. images, fancy CSS, structured HTML, clever Javascript): your choice.  If you're a hard-core developer that never touches a UI, don't feel you have to do so here.  If you're a designer at heart and that's the skillset you'd like to show off, go to town and wow us.  This is your sample; it should reflect who you are and how you want to represent yourself.
+*  We've set up this Rails project to use as a template.  Why?  Simply because our application is written in Rails.  It's not **required** for you to do the same, but understand that that's what we are actively looking for.  Also, you should note that there are some [Cucumber](www.cukes.info) tests embedded in the application.  We also have an additional set of Cucumber tests and we'll run both against whatever is submitted.  We won't go so far as to say your sample *has* to pass the tests, but they really, _really_ should.  We're jus' sayin'...  To run the Cucumber specs, use a terminal window, change to the project directory, and run `rake cucumber`. 
+*  We use [RSpec](http://rspec.info/), so we set this skeleton project up with same.  If you'd rather use [Test::Unit](http://test-unit.rubyforge.org/), that's fine.  You don't *have* to have unit tests, but we take the same approach our math teachers did back in high school: show your work.  To run specs, from the project directory, type `rake spec`.
+*  Making it look pretty (i.e. images, fancy CSS, structured HTML, clever Javascript): your choice.  If you're a hard-core developer that never touches a UI, don't feel you have to do so here.  If you're a designer at heart and that's the skillset you'd like to show off, go to town and wow us.  This is your sample; it should reflect who you are and how you want to represent yourself.
